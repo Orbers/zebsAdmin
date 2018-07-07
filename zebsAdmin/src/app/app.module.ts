@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { SchoolListComponent } from './school-list/school-list.component';
@@ -16,7 +16,8 @@ import { SchoolDetailsComponent } from './school-details/school-details.componen
     SchoolDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialModule
   ],
   providers: [SchoolListService],
   bootstrap: [AppComponent]

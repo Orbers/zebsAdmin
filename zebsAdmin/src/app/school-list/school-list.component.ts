@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolListService } from './school-list.service';
 import { School } from '../shared/models/school.model';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-school-list',

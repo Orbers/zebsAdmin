@@ -1,11 +1,12 @@
 import { School } from "./school.model";
+import { Location } from "./location.model";
 
 export class User {
   firstName: string;
   lastName: string;
   dob: Date;
-  homeLocation: string;
-  postalAddress: string;
+  location: Location;
   phoneNumber: number[];
-  zebs: School[];
+  attendedSchools: School[];
+  teachingLocations: School [];
 }

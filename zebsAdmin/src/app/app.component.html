@@ -1,31 +1,32 @@
-<div>
-  <mat-toolbar color="primary">
-    <span><mat-icon>mood</mat-icon></span>
+<mat-toolbar color="primary">
+  <button mat-button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+  <span>{{title}}</span>
+  <span class="example-fill-remaining-space"></span>
+  <span>user details</span>
+</mat-toolbar>
 
-    <span>Yay, Material in Angular 2!</span>
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="opened" >
+    <mat-nav-list>
+        <a mat-list-item href="#"> Schools </a>
+        <a mat-list-item href="#"> Lessons </a>
+        <a mat-list-item href="#"> Teachers </a>
+        <a mat-list-item href="#"> Students </a>
+     </mat-nav-list>
+  </mat-sidenav>
 
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-  </mat-toolbar>
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
-  </mat-menu>
-
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-  </mat-card>
-
-  <span class="done">
-    <button mat-fab>
-      <mat-icon>check circle</mat-icon>
-    </button>
-  </span>
-</div>
-<!--h1>ZEBS Admin</h1>
-<app-school-list></app-school-list-->
+  <mat-sidenav-content>
+    <div style="position:relative; max-height:100%;">
+      <main>
+          <app-school-list></app-school-list>
+      </main>
+      <footer color="primary">
+        here is the footer
+      </footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
